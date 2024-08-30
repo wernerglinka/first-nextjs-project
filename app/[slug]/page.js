@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import getAvailableFiles from "../../utils/getAvailableFiles";
-import components from "../../components";
+import SectionContainer from "../../utils/renderPageSection";
 
 /**
  * The generateStaticParams function is used in combination with dynamic route
@@ -46,31 +46,27 @@ export default function Global( { params } ) {
   // The name of the page is passed as a parameter to the page component
   const slug = params.slug;
 
+  // get the available pages
   const validPages = getAvailableFiles( 'pages' );
 
+  // check if page slug is valid
   const isValidPage = validPages.some( page => page.slug === slug );
+
   // if page is not valid display 404 page
   if ( !isValidPage ) {
     notFound();
   }
 
+  // get the page frontmatter identified by it slug
   const pageFrontmatter = validPages.find( page => page.slug === slug );
   const pageSections = pageFrontmatter.sections;
 
-
-
-
+  // render the page sections
   return (
     <main>
       { pageSections &&
         pageSections.map( ( section, i ) => {
-          const SectionComponent = components[ section.type ];
-
-          return (
-            <div key={ `${ section.template }${ i }` }>
-              <SectionComponent info={ section } />
-            </div>
-          );
+          return <SectionContainer key={ i } section={ section } />;
         } ) }
     </main>
   );
