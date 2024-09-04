@@ -1,12 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Markdown from 'markdown-to-jsx';
 
 export default function Image( { image } ) {
-
-  console.log( image );
-
   const imagePrefix = process.env.IMAGE_PREFIX;
-  const source = imagePrefix + image.src;
   const lowResImagesrc = `${ imagePrefix }w_100,c_fill,g_auto,f_auto/${ image.src }`;
 
   return (
@@ -19,7 +15,7 @@ export default function Image( { image } ) {
         className="high-res"
         src=""
         alt={ image.alt }
-        data-prefix={ source }
+        data-prefix={ imagePrefix }
         data-source={ image.src }
       />
       { image.caption && (
