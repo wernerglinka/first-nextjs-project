@@ -42,6 +42,12 @@ export async function generateMetadata( { params, searchParams }, parent ) {
   };
 }
 
+
+/**
+ * This is a server page component that is used to render the page identified
+ * by the slug parameter. The page content is fetched from the source markdown 
+ * file.
+ */
 export default function RenderPage( { params } ) {
   // The slug of the page is passed as a parameter to the page component
   const slug = params.slug;

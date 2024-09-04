@@ -33,11 +33,12 @@ sections:
                   aspectRatio: "65.8"
                   caption: "Photo by Daniel Mennerich"
                 text:
+                  prefix: "Read this"
                   title: Ruhrpott
                   header: "h1"
                   subTitle: ""
                   prose: |-
-                    Geologically, the region is defined by coal-bearing layers from the upper Carboniferous period. The coal seams reach the surface in a strip along the river Ruhr and dip downward from the river to the north. Beneath the Lippe, the coal seams lie at a depth of 2,000 to 2,600 ft.   
+                    Geologically, the region is defined by coal-bearing layers from the upper Carboniferous period. The [coal](/) seams reach the surface in a strip along the river Ruhr and dip downward from the river to the north. Beneath the Lippe, the coal seams lie at a depth of 2,000 to 2,600 ft.   
               - slide:
                 image: 
                   src: "v1664401059/zeche-nordstern/banner2_a6famj.jpg"
@@ -45,6 +46,7 @@ sections:
                   aspectRatio: "66.7"
                   caption: "Photo by Daniel Mennerich"
                 text:
+                  prefix: "and this"
                   title: Ruhrpott
                   header: "h1"
                   subTitle: ""
@@ -57,6 +59,7 @@ sections:
                   aspectRatio: "73.6"
                   caption: "Photo by Daniel Mennerich"
                 text:
+                  prefix: "one more"
                   title: Ruhrpott
                   header: "h1"
                   subTitle: ""

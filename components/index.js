@@ -1,10 +1,8 @@
-import hero from './hero';
-import text from './text';
+import Text from './Text';
 import FullPageImageSlider from './FullPageImageSlider';
 
 export default {
-  hero,
-  text,
+  Text,
   FullPageImageSlider,
 };
 
