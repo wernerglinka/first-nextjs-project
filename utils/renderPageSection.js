@@ -44,7 +44,7 @@ export default function SectionContainer( { section } ) {
   return (
     <Container
       className={ sectionClasses }
-      id={ sectionId ? sectionId : undefined }
+      id={ sectionId }
       style={ sectionStyles ? sectionStyles : undefined }
     >
       <div className={ `columns cols${ columnLength }` }>

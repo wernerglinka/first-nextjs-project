@@ -42,11 +42,11 @@ export async function generateMetadata( { params, searchParams }, parent ) {
   };
 }
 
-export default function Global( { params } ) {
-  // The name of the page is passed as a parameter to the page component
+export default function RenderPage( { params } ) {
+  // The slug of the page is passed as a parameter to the page component
   const slug = params.slug;
 
-  // get the available pages
+  // get all available pages
   const validPages = getAvailableFiles( 'pages' );
 
   // check if page slug is valid
@@ -57,7 +57,7 @@ export default function Global( { params } ) {
     notFound();
   }
 
-  // get the page frontmatter identified by it slug
+  // get the page frontmatter identified by its slug
   const pageFrontmatter = validPages.find( page => page.slug === slug );
   const pageSections = pageFrontmatter.sections;
 
